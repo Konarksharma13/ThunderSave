@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-zenitsu-yellow: #fce300;
+  --color-zenitsu-amber: #ffb300;
+  --color-zenitsu-white: #ffffff;
+  --color-zenitsu-gray: #f5f5f5;
+  
+  --shadow-glass: 0 8px 32px 0 rgba(252, 227, 0, 0.1);
+}
+
+@layer base {
+  body {
+    background: linear-gradient(135deg, #ffffff 0%, #fff9c4 50%, #fff3e0 100%);
+    color: #333;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-yellow {
+    background: rgba(252, 227, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(252, 227, 0, 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 15px rgba(252, 227, 0, 0.5);
+  }
+
+  .spark-glow {
+    box-shadow: 0 0 8px 2px rgba(252, 227, 0, 0.6);
+  }
+
+  .text-glow-yellow {
+    text-shadow: 0 0 8px rgba(252, 227, 0, 0.8);
+  }
+
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 70%);
+  }
+
+  .speed-lines-intense {
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(252, 227, 0, 0.2) 2px,
+      rgba(252, 227, 0, 0.2) 4px
+    );
+    background-size: 200% 100%;
+    animation: speed-move 0.1s linear infinite;
+  }
+}
+
+@keyframes speed-move {
+  0% { background-position: 0 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes lightning-move {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes pulse-yellow {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(252, 227, 0, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(252, 227, 0, 0); }
+}
+
+.animate-pulse-yellow {
+  animation: pulse-yellow 2s infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(252, 227, 0, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(252, 227, 0, 0.5);
+}
