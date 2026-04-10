@@ -5,6 +5,8 @@
 [![Vite](https://img.shields.io/badge/Vite-6.2-646cff?style=flat-square&logo=vite)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.1-06b6d4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green?style=flat-square)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-8A2BE2)](https://thundersave-107358358799.us-west1.run.app/)
+
 
 > A lightning-fast, anime-themed personal finance tracker that turns budgeting into an epic RPG adventure. Master your money like a Thunder Hashira masters lightning.
 
